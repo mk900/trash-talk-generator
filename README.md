@@ -1,7 +1,7 @@
 # 幹話產生器
 工作到煩了嗎？快來試試這個幹話產生器，輕鬆點擊對象即可產出幹話，讓你工作輕鬆又愉快。
 
-![scrrenshot](https://github.com/mk900/trash_talk_generator/blob/master/screenshot.gif?raw=true)
+![screenshot](https://github.com/mk900/trash-talk-generator/blob/master/screenshot.gif)
 
 ## Requirement
 [Node.js]
