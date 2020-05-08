@@ -1,0 +1,44 @@
+<div class="container">
+  <!-- Title -->
+  <h1 class="text-center mt-5">你想對誰說幹話？</h1>
+
+  <!--Select a Profile Input -->
+  <form method="POST" action="/">
+    <div class="row mt-5 justify-content-between py-4 px-2 bg-secondary">
+      {{#each targets}}
+      <div class="card-deck col-4">
+        <div class="card">
+          <img src="{{this.img}}" class="card-img-top" alt="{{this.name}}">
+          <div class="card-body"></div>
+          <div class="card-footer">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="target{{@index}}" name="target" class="custom-control-input" value="{{this.id}}"
+                {{#if this.checked}}checked{{/if}}>
+              <label class="custom-control-label" for="target{{@index}}">
+                <h5 class="text-center">{{this.name}}</h5>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <!-- Submit to Display Result -->
+    <div class="row px-2 bg-secondary">
+      <div class="col-auto">
+        <button type="submit" class="btn btn-warning">產生幹話</button>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{text}}</textarea>
+        </div>
+        {{#if message}}
+        <div class="alert alert-danger" role="alert">
+          {{message}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </form>
+</div>
